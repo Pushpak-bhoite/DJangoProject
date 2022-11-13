@@ -31,9 +31,7 @@ def update_data(request , id ):
     else:
         pi = User.objects.get(pk=id)
         fm = StudentRegistration(request.POST ,instance = pi)
-
-
-    return render(request , 'enroll/updatestudent.html' , {'id':id})
+    return render(request , 'enroll/updatestudent.html' , {'form':fm})
 
 
 
