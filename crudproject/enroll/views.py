@@ -8,10 +8,10 @@ def add_show(request):
     if request.method == "POST":
         fm = StudentRegistration(request.POST)
         if fm.is_valid():
-            nm = fm.cleaned_data['name']
+            nm = fm.cleaned_data['emp_name']
             em = fm.cleaned_data['email']
-            pw = fm.cleaned_data['password']
-            reg = User(name=nm , email=em , password=pw )
+            pw = fm.cleaned_data['work']
+            reg = User(emp_name=nm , email=em , work=pw )
             reg.save()
             fm = StudentRegistration()#this sentese shows blank data form
     else:

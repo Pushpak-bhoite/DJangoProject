@@ -5,12 +5,12 @@ from .models import User
 class StudentRegistration(forms.ModelForm) :
     class Meta:
         model = User
-        fields = ['name','email','password']
+        fields = ['emp_name','email','work']
         widgets = {
             #These included classes use to add css to form
-            'name': forms.TextInput(attrs={'class':'form-control'}),
+            'emp_name': forms.TextInput(attrs={'class':'form-control'}),
             'email': forms.EmailInput(attrs={'class':'form-control'}),
-            'password': forms.PasswordInput(attrs={'class':'form-control'}),
+            'work': forms.TextInput(attrs={'class':'form-control'}),
         }
 
  
